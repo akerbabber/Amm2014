@@ -4,13 +4,13 @@ if (isset($_SESSION['user'])) {
     $nav = "  <nav>
       <h2>Menu</h2>
             <ul>
-               <li><form action=\"/controller/login-controller.php\" method=\"post\">
+               <li><form action=\"./controller/login-controller.php\" method=\"post\">
                <input type=\"submit\" name= \"logout\" value=\"logout\"/>
 
     </form>
 
                 </li>
-<li><a href='../view/post-content.php'>Scrivi un articolo</a> </li>
+<li><a href='./view/post-content.php'>Scrivi un articolo</a> </li>
             </ul>
             </nav>";
 }
