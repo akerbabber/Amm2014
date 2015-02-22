@@ -28,7 +28,7 @@ class Controller {
                 $_SESSION["user"] =$user;
             }
             echo $_SESSION["user"];
-           header('location:?page=index') ;
+           header('location:../index.php?page=index') ;
             return true;
         }
 
