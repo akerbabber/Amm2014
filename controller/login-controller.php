@@ -11,7 +11,7 @@ class Controller {
         if ($_POST["user"]==admin && $_POST["password"] == admin) {
             $_SESSION["loggedIn"] =true;  // Nella variabile SESSION associo TRUE al valore logge
             $_SESSION["user"]="admin";
-            header('location:/?page=index') ;
+            header('location:../?page=index') ;
 
         }
         else {
