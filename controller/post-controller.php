@@ -20,4 +20,5 @@ if (@mysql_query($sql) or die (mysql_error())){
 echo "Articolo inserito con successo da: ";
 echo    $_SESSION["user"];
 }
+    header("Location:../index.php");
 }
