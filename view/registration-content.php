@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2>Registrazione</h2>
-<form name="form_registration" method="post" action="../controller/registration-controller.php">
+<form name="form_registration" method="post" action="./controller/registration-controller.php">
     <br/>
     <p>Username: <input type="text" name="username_reg"></p>
     <br/>
