@@ -10,7 +10,7 @@
 
 <h1>Login</h1>
 <section>
-    <form action="../controller/login-controller.php" method="post">
+    <form action="./controller/login-controller.php" method="post">
         <label for="user">Nome utente</label>
         <input type="text" name="user" id="user" />
         <br/>
