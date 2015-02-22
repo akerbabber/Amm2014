@@ -1,6 +1,9 @@
 <?php
 include "controller/database-controller.php";
+if(!isset($_SESSION)) {
+
 session_start();
+}
 function anteprima($testo, $lunghezza, $finale) {
     return (count($parole = explode(' ', $testo)) > $lunghezza) ? implode(' ', array_slice($parole, 0, $lunghezza)) . $finale : $testo;
 }

@@ -10,7 +10,7 @@ if (isset($_SESSION['user'])) {
     </form>
 
                 </li>
-<li><a href='/view/post-content.php'>Scrivi un articolo</a> </li>
+<li><a href='../view/post-content.php'>Scrivi un articolo</a> </li>
             </ul>
             </nav>";
 }
