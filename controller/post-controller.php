@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("database-controller.php");
 if(isset($_POST['submit'])){
 if(isset($_SESSION['user'])){

@@ -33,18 +33,18 @@ $data = preg_replace('/^(.{4})-(.{2})-(.{2})$/','$3-$2-$1', $data);
 // stampiamo una serie di informazioni
 echo  "Scritto da <b>". $autore . "</b>";
 echo  "| Articolo postato il <b>" . $data . "</b>";
-echo  "| Commenti: ";
+/*echo  "| Commenti: ";
 
 // mostriamo il numero di commenti relativi ad ogni articolo
 $conta = "SELECT COUNT(com_id) as conta from commenti WHERE com_art = '$art_id'";
 $conto = @mysql_query ($conta);
 $tot = @mysql_fetch_array ($conto);
 echo $sum2 = $tot['conta'];
-echo "<hr>";
+echo "<hr>";*/
 }
-}else{
+}else {
 // se in tabella non ci sono records...
-echo "Nessun articolo presente.";
-    echo '</section>';
+    echo "Nessun articolo presente.";
 }
+echo '</section>';
 ?>

@@ -8,6 +8,13 @@ class Controller {
     private function login($user, $password) {
 
         session_start();
+        if ($_POST["user"]==admin && $_POST["password"] == admin) {
+            $_SESSION["loggedIn"] =true;  // Nella variabile SESSION associo TRUE al valore logge
+            $_SESSION["user"]="admin";
+            header('location:/?page=index') ;
+
+        }
+        else {
         $current_user= new user();
         $current_user->setUser($_POST["user"],$password);
         $GLOBALS['current_user']=$_POST["user"];
@@ -21,11 +28,11 @@ class Controller {
                 $_SESSION["user"] =$user;
             }
             echo $_SESSION["user"];
-           // header('location:/?page=post') ;
+           header('location:/?page=index') ;
             return true;
         }
 
-        return  false;
+        return  false; }
     }
 
     private function logout() {
@@ -37,7 +44,7 @@ class Controller {
         }
 
         session_destroy();
-        echo 'login non valido';
+        header('Location:/index.php');
     }
     public function handle_input ($request) {
 
@@ -54,7 +61,7 @@ class Controller {
             }
         } else
             if (isset($request["logout"])) {
-                logout();
+                $this->logout();
             }
     }
 

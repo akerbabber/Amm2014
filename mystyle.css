@@ -49,6 +49,9 @@ nav {
     min-height: 480px;
     padding: 3px;
 
+    position: relative;
+    height:100%;
+
     background-color: #C7D0D5;
     border:1px;
     border-style: solid;

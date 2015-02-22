@@ -8,5 +8,5 @@ $db_selected=mysql_select_db("bloglandia",$connessione_al_server); // dove io ho
 if(!$db_selected){
     die ('Errore nella selezione del database: errore '.mysql_error()); // se la connessione non andrà a buon fine apparirà questo messaggio
 }
-else    echo 'good';
+else  ;
 

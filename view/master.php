@@ -1,12 +1,29 @@
 <?php
+session_start();
+if (isset($_SESSION['user'])) {
+    $nav = "  <nav>
+      <h2>Menu</h2>
+            <ul>
+               <li><form action=\"/controller/login-controller.php\" method=\"post\">
+               <input type=\"submit\" name= \"logout\" value=\"logout\"/>
 
-$nav = "  <nav>
+    </form>
+
+                </li>
+<li><a href='/view/post-content.php'>Scrivi un articolo</a> </li>
+            </ul>
+            </nav>";
+}
+else {
+
+    $nav = "  <nav>
       <h2>Menu</h2>
             <ul>
                <li><a href='?page=login'>Login</a> </li>
                <li><a href='?page=registration'>Registrati</a> </li>
             </ul>
             </nav>";
+}
 $content ="";
 
 $header = " <header>
@@ -19,5 +36,12 @@ $footer = " <footer>
         </footer>";
 echo ($header);
 echo ($nav);
-include "post-roller.php";
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']=="admin") {
+        include 'admin-view.php';
+    }
+    else include 'user-view.php';
+}
+else {
+include "post-roller.php"; }
 echo ($footer);
