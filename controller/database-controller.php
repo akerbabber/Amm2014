@@ -1,5 +1,5 @@
 <?php     //connessione al nostro database
-$connessione_al_server=mysql_connect("localhost","root","asd");  // ip locale, login e password
+$connessione_al_server=mysql_connect("localhost","murruMaurizio","daino964");  // ip locale, login e password
 if(!$connessione_al_server){
     die ('Non riesco a connettermi: errore '.mysql_error()); // questo apparirà solo se ci sarà un errore
 }
