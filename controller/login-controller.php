@@ -44,7 +44,7 @@ class Controller {
         }
 
         session_destroy();
-        header('Location:/index.php');
+        header('Location:../index.php');
     }
     public function handle_input ($request) {
 
