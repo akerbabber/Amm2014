@@ -6,7 +6,7 @@
 <body>
 <h1>Inserisci un articolo</h1>
 
-    <form action="./controller/post-controller.php" method="post">
+    <form action="../controller/post-controller.php" method="post">
         Titolo:<br>
         <input name="titolo" type="text" size="30"><br>
         Articolo:<br>
